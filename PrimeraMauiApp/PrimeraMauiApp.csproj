@@ -64,6 +64,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Pages\ControlesComunesPages.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\InicioPages.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

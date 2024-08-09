@@ -4,7 +4,7 @@
              x:Class="PrimeraMauiApp.Pages.LibrosPages"
              Title="Libros">
     <ScrollView>
-        <VerticalStackLayout>
+        <VerticalStackLayout BackgroundColor="{StaticResource FondoPagina}">
             <Label 
                 Text="Lista de Libros"
                 VerticalOptions="Center" 
@@ -15,10 +15,11 @@
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Grid ColumnDefinitions="*,2*" RowDefinitions="*,2*,*">
+                            
                             <Image Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" HeightRequest="250" Source="{Binding portada_url}"/>
-                            <Label Grid.Row="0" Grid.Column="1" FontSize="Title" Text="{Binding nombre}"/>
-                            <Label Grid.Row="1" Grid.Column="1" FontSize="Medium" Text="{Binding sinopsis}"/>
-                            <Label Grid.Row="2" Grid.Column="1" FontSize="Small" Text="{Binding autor}"/>
+                            <Label Grid.Row="0" Grid.Column="1" FontSize="Title" Text="{Binding nombre}" TextColor="Black" />
+                            <Label Grid.Row="1" Grid.Column="1" FontSize="Medium" Text="{Binding sinopsis}" TextColor="Black"/>
+                            <Label Grid.Row="2" Grid.Column="1" FontSize="Small" Text="{Binding autor}" TextColor="Black"/>
                         </Grid>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
@@ -27,7 +28,8 @@
             <Button Text="Volver"
                 VerticalOptions="Center"
                 HorizontalOptions="Center"
-                Clicked="Button_Clicked"  />
+                Clicked="Button_Clicked" 
+                Style="{StaticResource EstiloBoton}" />
         </VerticalStackLayout>
     </ScrollView>
 

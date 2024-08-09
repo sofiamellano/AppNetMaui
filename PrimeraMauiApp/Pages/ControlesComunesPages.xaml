@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PrimeraMauiApp.Pages.ControlesComunesPages"
+             Title="ControlesComunesPages">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Grid ColumnDefinitions="*,3*,*" RowDefinitions="*,*,*,*,*,*" BackgroundColor="Gold" Style="{StaticResource EstiloGrid}">
+                <Frame Grid.ColumnSpan="3" BackgroundColor="PapayaWhip">
+                    <Label Text="Controles Comunes" Grid.ColumnSpan="3" FontSize="Header" TextColor="Black"/>
+                </Frame>
+                
+                
+                <Label Text="Label" Grid.Row="1" Grid.Column="0" TextColor="Black"/>
+                <Label Text="Permite mostrar texto en pantalla" Grid.Row="1" Grid.Column="1" TextColor="Black"/>
+                <Label Text="Libros" Grid.Row="1" Grid.Column="2" TextColor="Black"/>
+                
+                <Label Text="Button" Grid.Row="2" Grid.Column="0" TextColor="Black"/>
+                <Label Text="Permite crear botones en pantalla" Grid.Row="2" Grid.Column="1" TextColor="Black"/>
+                <Label Text="Guardar" Grid.Row="2" Grid.Column="2" TextColor="Black"/>
+
+                <Label Text="BoxView" Grid.Row="3" Grid.Column="0" TextColor="Black"/>
+                <Label Text="Permite crear cuadros de color" Grid.Row="3" Grid.Column="1" TextColor="Black"/>
+                <BoxView BackgroundColor="White" Grid.Row="3" Grid.Column="2" WidthRequest="100" HeightRequest="100"/>
+
+                <Label Text="DatePicker" Grid.Row="4" Grid.Column="0" TextColor="Black"/>
+                <Label Text="Permite definir una fecha desplegando calendario para elejirla" Grid.Row="4" Grid.Column="1" TextColor="Black"/>
+                <DatePicker BackgroundColor="White" Grid.Row="4" Grid.Column="2"/>
+
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>    
+</ContentPage>
