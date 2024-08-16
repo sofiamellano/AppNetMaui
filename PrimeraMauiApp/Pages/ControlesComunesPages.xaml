@@ -5,7 +5,7 @@
              Title="ControlesComunesPages">
     <ScrollView>
         <VerticalStackLayout>
-            <Grid ColumnDefinitions="*,3*,*" RowDefinitions="*,*,*,*,*,*" BackgroundColor="Gold" Style="{StaticResource EstiloGrid}">
+            <Grid ColumnDefinitions="*,3*,*" RowDefinitions="*,*,*,*,*,*,*,*,*,*" BackgroundColor="{StaticResource FondoPagina}"  Style="{StaticResource EstiloGrid}">
                 <Frame Grid.ColumnSpan="3" BackgroundColor="PapayaWhip">
                     <Label Text="Controles Comunes" Grid.ColumnSpan="3" FontSize="Header" TextColor="Black"/>
                 </Frame>
@@ -13,11 +13,11 @@
                 
                 <Label Text="Label" Grid.Row="1" Grid.Column="0" TextColor="Black"/>
                 <Label Text="Permite mostrar texto en pantalla" Grid.Row="1" Grid.Column="1" TextColor="Black"/>
-                <Label Text="Libros" Grid.Row="1" Grid.Column="2" TextColor="Black"/>
+                <Label Text="Libros" Grid.Row="1" Grid.Column="2" TextColor="Black" WidthRequest="100"/>
                 
                 <Label Text="Button" Grid.Row="2" Grid.Column="0" TextColor="Black"/>
                 <Label Text="Permite crear botones en pantalla" Grid.Row="2" Grid.Column="1" TextColor="Black"/>
-                <Label Text="Guardar" Grid.Row="2" Grid.Column="2" TextColor="Black"/>
+                <Button Text="Guardar" Grid.Row="2" Grid.Column="2" WidthRequest="100"/>
 
                 <Label Text="BoxView" Grid.Row="3" Grid.Column="0" TextColor="Black"/>
                 <Label Text="Permite crear cuadros de color" Grid.Row="3" Grid.Column="1" TextColor="Black"/>
@@ -25,9 +25,33 @@
 
                 <Label Text="DatePicker" Grid.Row="4" Grid.Column="0" TextColor="Black"/>
                 <Label Text="Permite definir una fecha desplegando calendario para elejirla" Grid.Row="4" Grid.Column="1" TextColor="Black"/>
-                <DatePicker BackgroundColor="White" Grid.Row="4" Grid.Column="2"/>
+                <DatePicker BackgroundColor="White" Grid.Row="4" Grid.Column="2"  WidthRequest="100"/>
+
+                <Label Text="Entry" Grid.Row="5" Grid.Column="0" TextColor="Black"/>
+                <Label Text="Permite ingresar texto" Grid.Row="5" Grid.Column="1" TextColor="Black"/>
+                <Entry Placeholder="Escribe Aqui" Grid.Row="5" Grid.Column="2" WidthRequest="100"/>
+
+                <Label Text="Editor" Grid.Row="6" Grid.Column="0" TextColor="Black"/>
+                <Label Text="Permite ingresar texto en varias lineas" Grid.Row="6" Grid.Column="1" TextColor="Black"/>
+                <Editor Placeholder="Escribe Aqui" Grid.Row="6" Grid.Column="2" WidthRequest="100"/>
+
+                <Label Text="SearchBar" Grid.Row="7" Grid.Column="0" TextColor="Black" />
+                <Label Text="Permite buscar informacion" Grid.Row="7" Grid.Column="1" TextColor="Black"/>
+                <SearchBar Placeholder="Buscar" Grid.Row="7" Grid.Column="2" WidthRequest="100"/>
+
+                <Label Text="ListView" Grid.Row="8" Grid.Column="0" TextColor="Black"/>
+                <Label Text="Muestra una lista desplazable de elementos con plantillas de celdas" Grid.Row="8" Grid.Column="1" TextColor="Black"/>
+
+                <ListView Grid.Row="9" Grid.Column="2" ItemsSource="{Binding Frutas}" BackgroundColor="{StaticResource FondoPagina}" WidthRequest="100" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding}"/>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
 
             </Grid>
+
         </VerticalStackLayout>
     </ScrollView>    
 </ContentPage>
